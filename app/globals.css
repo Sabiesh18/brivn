@@ -8,8 +8,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* custom theme */
+  --color-gold: #C9A227;
+  --color-gold-dark: #8B6B00;
 }
 
 @media (prefers-color-scheme: dark) {
