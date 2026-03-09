@@ -51,7 +51,7 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
             <Link href="/" className="hover:text-gold transition">Home</Link>
-            <Link href="/products" className="hover:text-gold transition">Products</Link>
+            <Link href="/product" className="hover:text-gold transition">Products</Link>
             <Link href="/services" className="hover:text-gold transition">Services</Link>
             <Link href="/about" className="hover:text-gold transition">About Us</Link>
           </nav>

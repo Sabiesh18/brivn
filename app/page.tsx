@@ -1,5 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import ServiceSection from "@/components/ServiceSection";
+import ToolsSections from "@/components/ToolsSection";
 
 export default function Home() {
   return (
@@ -9,12 +10,13 @@ export default function Home() {
         style={{ backgroundImage: "url('/assets/jpg/landing_background.jpg')" }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-white/60"></div>
+        <div className="absolute inset-0 bg-white/80"></div>
 
         {/* Content */}
         <div className="relative z-10">
           <HeroSection />
           <ServiceSection />
+          <ToolsSections />
         </div>
       </div>
     </main>
