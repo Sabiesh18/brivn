@@ -26,9 +26,9 @@ export default function Header() {
       <header
         className={`w-full h-20 fixed top-0 left-0 z-[100] transition-all duration-300
         ${scrolled
-          ? "backdrop-blur-md bg-white/70 shadow-md"
-          : "bg-transparent"
-        }`}
+            ? "backdrop-blur-md bg-white/70 shadow-md"
+            : "bg-transparent"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 md:px-6 h-full flex items-center justify-between">
 
@@ -57,9 +57,11 @@ export default function Header() {
           </nav>
 
           {/* Desktop Button */}
-          <button className="hidden md:block bg-gold hover:bg-gold-dark text-white px-5 py-2 rounded-full font-medium transition">
-            Contact Us
-          </button>
+          <Link href="/contact">
+            <button className="hidden md:block bg-gold hover:bg-gold-dark text-white px-5 py-2 rounded-full font-medium transition">
+              Contact Us
+            </button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -89,9 +91,11 @@ export default function Header() {
               <Link href="/services" onClick={() => setMenuOpen(false)}>Services</Link>
               <Link href="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
 
-              <button className="bg-gold text-white px-6 py-2 rounded-full">
-                Contact Us
-              </button>
+              <Link href="/contact" onClick={() => setMenuOpen(false)}>
+                <button className="bg-gold text-white px-6 py-2 rounded-full">
+                  Contact Us
+                </button>
+              </Link>
 
             </nav>
           </motion.div>
