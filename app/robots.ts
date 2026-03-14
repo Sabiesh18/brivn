@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 // Replace with your actual domain when deploying
-const SITE_URL = 'https://brivn.vercel.app'
+const SITE_URL = 'https://brivnltd.vercel.app/'
 
 export default function robots(): MetadataRoute.Robots {
   return {

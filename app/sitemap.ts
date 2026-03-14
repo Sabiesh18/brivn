@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 // Replace this with your actual production domain when you deploy
-const SITE_URL = 'https://brivn.vercel.app' // Example domain
+const SITE_URL = 'https://brivnltd.vercel.app/' // Example domain
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
