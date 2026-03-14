@@ -35,11 +35,11 @@ export default function ServicesPage() {
 
             {/* Hero Section */}
             <section
-                className="relative py-24 bg-cover bg-center"
+                className="relative py-24 bg-cover bg-center rounded-b-[40px] md:rounded-b-[80px] overflow-hidden"
                 style={{ backgroundImage: "url('/assets/jpg/service-provide.jpg')" }}
             >
                 {/* Gold Overlay */}
-                <div className="absolute inset-0 bg-gold/50"></div>
+                <div className="absolute inset-0 bg-gold/50 rounded-b-[40px] md:rounded-b-[80px]"></div>
 
                 {/* Content */}
                 <div className="relative max-w-7xl mx-auto px-6 text-center text-white">

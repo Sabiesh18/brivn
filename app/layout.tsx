@@ -35,15 +35,18 @@ export default function RootLayout({
   }, [pathname]); // runs on every route change
 
   return (
-    <html lang="en">
-      <body className={roboto.className}>
-
-        {/* Loader */}
-        {loading && <GearLoader />}
+    <html lang="en" className="overflow-x-hidden">
+      <body className={`${roboto.className} flex flex-col min-h-screen overflow-x-hidden w-full`}>
 
         {/* Main Site */}
         <Header />
-        {children}
+        
+        <main className="relative flex-grow flex flex-col overflow-x-hidden w-full">
+            {/* Loader overlay constrained to main content area */}
+            {loading && <GearLoader />}
+            {children}
+        </main>
+
         <Footer />
         <ScrollToTop />
 

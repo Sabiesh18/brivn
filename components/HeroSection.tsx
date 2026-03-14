@@ -2,6 +2,13 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import dynamic from 'next/dynamic';
+
+// Dynamically import the custom 3D Canvas to disable SSR 
+const AnimatedBackground = dynamic(() => import('./AnimatedBackground'), {
+  ssr: false,
+  loading: () => false
+});
 
 type CardAnimation = {
   hidden: { opacity: number; y: number };
@@ -29,19 +36,27 @@ const cardAnimation: CardAnimation = {
 
 export default function HeroSection() {
   return (
-    <section className="relative pt-28 md:pt-40 pb-16 md:pb-24 overflow-hidden">
+    <section className="relative pt-28 md:pt-40 pb-16 md:pb-24 overflow-hidden min-h-[90vh] flex flex-col justify-center">
+
+      {/* 3D WebGL Background */}
+      <div className="absolute inset-0 z-0 w-full h-full pointer-events-none opacity-80 mix-blend-multiply flex justify-center items-center">
+        <AnimatedBackground />
+      </div>
+
+      {/* Gradient Overlay for text readability */}
+      <div className="absolute inset-0 z-0 pointer-events-none"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
 
         {/* Title */}
-        <div className="text-center max-w-3xl mx-auto">
+        <div className="text-center max-w-3xl mx-auto p-8 md:p-12">
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black leading-tight">
             The Future of Manufacturing{" "}
             <span className="text-gold">with Latest Technology</span>
           </h1>
 
-          <p className="text-gray-400 mt-4 md:mt-6 text-base md:text-lg">
+          <p className="text-gray-600 mt-4 md:mt-6 text-base md:text-lg font-medium">
             Expert tech to elevate your manufacturing. Let’s take your business further.
           </p>
 

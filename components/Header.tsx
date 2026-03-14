@@ -56,20 +56,23 @@ export default function Header() {
             <Link href="/about" className="hover:text-gold transition">About Us</Link>
           </nav>
 
-          {/* Desktop Button */}
-          <Link href="/contact">
-            <button className="hidden md:block bg-gold hover:bg-gold-dark text-white px-5 py-2 rounded-full font-medium transition">
-              Contact Us
-            </button>
-          </Link>
+          {/* Right side actions */}
+          <div className="flex items-center gap-4 border-none">
+            {/* Desktop Button */}
+            <Link href="/contact" className="hidden md:block">
+              <button className="bg-gold hover:bg-gold-dark text-white px-5 py-2 rounded-full font-medium transition cursor-pointer">
+                Contact Us
+              </button>
+            </Link>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-gray-900"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden text-gray-900 border-none bg-transparent hover:bg-gray-100 p-2 rounded-md cursor-pointer"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              {menuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
 
         </div>
       </header>
@@ -87,7 +90,7 @@ export default function Header() {
             <nav className="flex flex-col items-center gap-6 py-8 text-gray-700 font-medium">
 
               <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
-              <Link href="/products" onClick={() => setMenuOpen(false)}>Products</Link>
+              <Link href="/product" onClick={() => setMenuOpen(false)}>Products</Link>
               <Link href="/services" onClick={() => setMenuOpen(false)}>Services</Link>
               <Link href="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
 

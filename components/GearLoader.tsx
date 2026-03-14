@@ -2,10 +2,8 @@
 
 export default function GearLoader() {
     return (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center backdrop-blur-md bg-white/20">
-
-            <div className="flex items-center gap-6">
-
+        <div className="absolute inset-0 z-[90] bg-white/30 backdrop-blur-md">
+            <div className="sticky top-0 h-screen flex items-center justify-center pointer-events-none">
                 {/* Small Gear */}
                 <svg
                     className="w-10 h-10 text-gold animate-[spin_3s_linear_reverse_infinite]"

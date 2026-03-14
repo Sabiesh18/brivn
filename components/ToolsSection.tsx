@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const services = [
     {
-        title: "Hydraulic Motors",
+        title: "Hydraulic Pumps",
         image: "/assets/jpg/hydraulic.jpg",
         description:
             "We supply and service high-quality hydraulic motors used in a wide range of industrial and mobile machinery. Our motors are designed to deliver reliable performance, high torque, and efficient power transmission in demanding environments. We also provide maintenance, repair, and replacement services to ensure smooth and continuous operation of hydraulic systems.",
@@ -53,12 +53,11 @@ export default function ToolsSections() {
                         return (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, y: 40 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6 }}
-                                viewport={{ once: true }}
-                                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${reverse ? "lg:flex-row-reverse" : ""
-                                    }`}
+                                initial={{ opacity: 0, x: reverse ? 100 : -100 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8, ease: "easeOut" }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center`}
                             >
 
                                 {/* Image */}

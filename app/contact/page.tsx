@@ -65,9 +65,6 @@ export default function ContactUs() {
                         <div>
                             <p className="text-gray-500 text-sm">Email:</p>
                             <p className="text-lg font-medium text-gray-900">
-                                finance.brivn@gmail.com
-                            </p>
-                            <p className="text-lg font-medium text-gray-900">
                                 sales.brivn@gmail.com
                             </p>
                             <p className="text-lg font-medium text-gray-900">
