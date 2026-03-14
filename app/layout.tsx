@@ -9,6 +9,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { Roboto } from "next/font/google";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import Head from "next/head";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -36,15 +37,18 @@ export default function RootLayout({
 
   return (
     <html lang="en" className="overflow-x-hidden">
+      <Head>
+        <title>Brivn</title>
+      </Head>
       <body className={`${roboto.className} flex flex-col min-h-screen overflow-x-hidden w-full`}>
 
         {/* Main Site */}
         <Header />
-        
+
         <main className="relative flex-grow flex flex-col overflow-x-hidden w-full">
-            {/* Loader overlay constrained to main content area */}
-            {loading && <GearLoader />}
-            {children}
+          {/* Loader overlay constrained to main content area */}
+          {loading && <GearLoader />}
+          {children}
         </main>
 
         <Footer />
